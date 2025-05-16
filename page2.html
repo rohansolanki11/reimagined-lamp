@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multipage Form (p2)</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <h1>Organisation Details</h1>
+  <p>* = required</p>
+  <form>
+    <label>
+      Organisation Name*<br>
+      <input type="text" id="orgName" required>
+    </label>
+    <label>
+      Address (Line 1)*<br>
+      <textarea rows="4" cols="50" name="address1" id="address1" required></textarea>
+    </label>
+    <label>
+      Address (Line 2)<br>
+      <textarea rows="4" cols="50" name="address2" id="address2"></textarea>
+    </label>
+    <label>
+      Country*<br>
+      <select id="country" name="country" required autocomplete="country">
+        <option value="USA">USA
+        <option value="India">India
+        <option value="UK">UK
+        <option value="Canada">Canada
+        <option value="Australia">Australia
+        <option value="Germany">Germany
+        <option value="France">France
+        <option value="Japan">Japan
+        <option value="China">China
+        <option value="Brazil">Brazil
+      </select>
+    </label>
+    <label>
+      State*<br>
+      <select id="state" name="state" required></select>
+    </label>
+    <label>
+      City<br>
+      <input type="text" name="city" id="city" size="50">
+    </label>
+    <label>
+      Pincode*<br>
+      <input type="text" id="pincode" name="pincode" maxlength="10" required>
+    </label>
+    <button id="submitBtn">Submit Form</button>
+  </form>
+
+  <a href="./index.html">go back to page 1</a>
+  <script src="./page2.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multipage Form</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>Personal Details</h1>
+  <p>* = required</p>
+  <form action="./page2.html" method="post">
+    <label>
+      First Name*<br>
+      <input type="text" id="firstName" name="firstName" size="50" required>
+    </label>
+    <label>
+      Email*<br>
+      <input type="email" id="email" name="email" size="50" required>
+    </label>
+    <label>
+      Phone Number*<br>
+      <input type="tel" id="tel" name="phone" size="50" required>
+    </label>
+    <button type="submit" id="submitBtn">Next Page</button>
+  </form>
+
+  
+  <script src="./index.js"></script>
+</body>
+</html>
