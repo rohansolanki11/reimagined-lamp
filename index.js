@@ -5,7 +5,12 @@ function formSubmission(){
 }
 
 document.querySelector("#submitBtn").addEventListener("click",(event)=>{
+  const form = document.querySelector("#multiForm");
+  if (!form.checkValidity()) {
+    form.reportValidity(); // Show validation messages
+    return;
+  }
   event.preventDefault();
   formSubmission();
-  window.location.href = "./page2.html";
+  // window.location.href = "./page2.html";
 })
