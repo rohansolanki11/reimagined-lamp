@@ -12,5 +12,5 @@ document.querySelector("#submitBtn").addEventListener("click",(event)=>{
   }
   event.preventDefault();
   formSubmission();
-  // window.location.href = "./page2.html";
+  window.location.href = "./page2.html";
 })
