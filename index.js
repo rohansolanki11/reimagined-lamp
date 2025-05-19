@@ -4,13 +4,19 @@ function formSubmission(){
   localStorage.phone = document.querySelector("#tel").value;
 }
 
-document.querySelector("#submitBtn").addEventListener("click",(event)=>{
-  const form = document.querySelector("#multiForm");
-  if (!form.checkValidity()) {
-    form.reportValidity(); // Show validation messages
-    return;
-  }
-  event.preventDefault();
-  formSubmission();
-  window.location.href = "./page2.html";
-})
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("multiform");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    formSubmission();
+
+    window.location.href = "./page2.html";
+  });
+});
