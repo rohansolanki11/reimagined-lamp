@@ -104,6 +104,11 @@ document.querySelector("#country").addEventListener("change", () => {
 });
 
 document.querySelector("#submitBtn").addEventListener("click",(event)=>{
+  const form = document.querySelector("form");
+  if (!form.checkValidity()) {
+    form.reportValidity(); // Show validation messages
+    return;
+  }
   event.preventDefault();
   const formData = {};
   formData.firstName = localStorage.firstName;
